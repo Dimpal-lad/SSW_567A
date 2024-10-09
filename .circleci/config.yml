@@ -1,15 +1,15 @@
 version: 2.1
-orbs: 
-    python: circleci/python@2.0.1
+orbs:
+  python: circleci/python@2.0.1
 jobs:
   build-and-test:
     docker:
       - image: cimg/python:3.10.2
     steps:
       - checkout
-      - run: 
+      - run:
           command: |
             pip install pytest
-            pytest --junitxml=test-results/junit.xml TestTriangle.py
+            pytest --junitxml=test-results/junit.xml HW_02a/TestImprovedTriangle.py
       - store_test_results:
           path: test-results
