@@ -16,7 +16,7 @@ jobs:
       - store_test_results:
           path: test-results
 
-workflow:
+workflows:
   testing_triangles:
     jobs:
       - build-and-test
